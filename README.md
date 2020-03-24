@@ -1,5 +1,4 @@
-# Eddy-inertial wave interaction at the eddy scale induced by surface wind
-forcing
+# Eddy-inertial wave interaction induced by surface wind forcing
 
 ![Baroclinic eddy](input/surf_eddy.png)
 

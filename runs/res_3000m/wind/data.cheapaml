@@ -1,0 +1,33 @@
+#!sh  CheapAML
+ &CHEAPAML_CONST
+ cheapaml_ntim = 6		
+ cheapaml_mask_width=5
+ cheapaml_h = 1000.
+ cheapaml_kdiff = 1000.
+ cheap_taurelax = 3600,
+ cheap_taurelaxOce = 3600.0,			
+ &
+
+ &CHEAPAML_PARM01
+ UWindFile='/Users/takachanbo/MITgcm/eddy_airsea/input/u10.box'
+ VWindFile='/Users/takachanbo/MITgcm/eddy_airsea/input/v10.box'
+ SolarFile='/Users/takachanbo/MITgcm/eddy_airsea/input/ssrd.box'
+ AirTempFile='/Users/takachanbo/MITgcm/eddy_airsea/input/t2.box'
+ TrFile='/Users/takachanbo/MITgcm/eddy_airsea/input/t2.box'
+ AirQFile='/Users/takachanbo/MITgcm/eddy_airsea/input/d2.box'
+ QrFile='/Users/takachanbo/MITgcm/eddy_airsea/input/d2.box'
+#cheap_hfile='blh.box'
+#cheap_clfile='clouds.box'
+#cheap_dlwfile='strd.box'
+ &
+ 
+ &CHEAPAML_PARM02 
+ FluxFormula='COARE3'
+ useFreshWaterFlux=.FALSE.,
+ useFluxLimit=.TRUE.,
+ usetimevarblh=.FALSE.,
+ useclouds=.FALSE.,
+ usedlongwave=.FALSE.,
+ cheapamlXperiodic=.TRUE.,
+ cheapamlYperiodic=.TRUE.,
+ &

@@ -1,0 +1,9 @@
+#!/usr/bin/bash Packages
+ &PACKAGES
+ useOBCS=.FALSE.,
+ useRBCS=.FALSE.,
+ useMNC=.TRUE.,
+ useDIAGNOSTICS=.TRUE.,
+ useKPP=.TRUE.,
+ useCHEAPAML=.TRUE.,
+ &

@@ -1,0 +1,11 @@
+#!sh RBCS package parameters:
+&RBCS_PARM01
+ tauRelaxT=600.,
+ relaxMaskFile='/Users/takachanbo/MITgcm/eddy_airsea/input/tmask.box',
+ useRBCtemp=.TRUE.,
+ relaxTFile='/Users/takachanbo/MITgcm/eddy_airsea/input/trelax.box',
+ &
+
+# RBCS for pTracers (read this namelist only when ptracers pkg is compiled)
+ &RBCS_PARM02
+ &

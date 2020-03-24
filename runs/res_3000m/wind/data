@@ -1,0 +1,71 @@
+#!/bin/sh ====================
+# | Model parameters |
+# ====================
+#
+# Continuous equation parameters
+ &PARM01
+ tRefFile='/Users/takachanbo/MITgcm/eddy_airsea/input/tref.box',
+ viscAh=10.,
+# viscA4=1.E8,
+ viscAz=1.E-5,
+ no_slip_sides=.FALSE.,
+ no_slip_bottom=.FALSE.,
+ diffKhT=10.,
+ diffKzT=1.E-5,
+# corimap = 0 -> fplane
+# selectCoriMap=0,
+ f0=1.0e-4,
+ beta=0.E-11,
+ eosType='LINEAR',
+ tAlpha=2.E-4,
+ sBeta=0.E-4,
+ rigidLid=.FALSE.,
+ implicitFreeSurface=.TRUE.,
+ hFacMin=0.1,
+ nonHydrostatic=.FALSE.,
+ readBinaryPrec=32,
+ tempAdvScheme=4,
+ staggerTimeStep=.TRUE.
+ implicitDiffusion=.TRUE.,
+ implicitviscosity=.TRUE.,
+# usesinglecpuio=.TRUE.,
+ &
+
+# Elliptic solver parameters
+ &PARM02
+ cg2dMaxIters=500,
+ cg2dTargetResidual=1.E-7,
+ cg3dMaxIters=500,
+ cg3dTargetResidual=1.E-8,
+ &
+
+# Time stepping parameters
+ &PARM03
+ nIter0=0,
+ endTime=864000,
+ deltaT=120.0,
+ abEps=0.01,
+ pChkptFreq=0.0,
+ chkptFreq=0.0,
+ dumpFreq=3600.0,
+ monitorSelect=2,
+ monitorFreq=21600.,
+# pickupSuff='ckptA'
+ &
+
+# Gridding parameters
+ &PARM04
+ usingCartesianGrid=.TRUE.,
+ delXfile='/Users/takachanbo/MITgcm/eddy_airsea/input/dx.box',
+ delYfile='/Users/takachanbo/MITgcm/eddy_airsea/input/dy.box',
+ delRFile='/Users/takachanbo/MITgcm/eddy_airsea/input/dz.box',
+ &
+
+# Input datasets
+ &PARM05
+ bathyFile='/Users/takachanbo/MITgcm/eddy_airsea/input/topog.box',
+ hydrogThetaFile='/Users/takachanbo/MITgcm/eddy_airsea/input/tinit.box',
+ uVelInitFile='/Users/takachanbo/MITgcm/eddy_airsea/input/uinit.box',
+ vVelInitFile='/Users/takachanbo/MITgcm/eddy_airsea/input/vinit.box',
+ pSurfInitFile='/Users/takachanbo/MITgcm/eddy_airsea/input/einit.box',
+ &
